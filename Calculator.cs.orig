@@ -13,12 +13,9 @@ namespace CSharpTestBench
     {
         public int CalculateTotal(List<Item> items)
         {
-        {
-            if (items == null || !items.Any()) return 0;
             // BUG: This will throw a NullReferenceException if items is null
             // or an ArgumentNullException if the collection logic is unhandled.
             return items.Sum(i => i.Price);
-        }
         }
     }
 }
